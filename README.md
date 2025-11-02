@@ -1,103 +1,139 @@
 
 # 🃏 Strategic Card Battle Game – Java (OOP + Swing)
+ 
+Developed by: **Rahime Uysal** & **Zeynep Vuslat Solmaz**  
 
-This is a Java-based strategic card battle simulation game developed as a Programming Lab II project. The game showcases object-oriented programming (OOP) concepts such as inheritance, encapsulation, and polymorphism in a practical and visual environment using Java Swing.
 
 ---
 
-## 🎮 Game Concept
+## 🎮 Game Overview
 
-Two opponents — a human player and the computer — engage in a strategic battle using cards that represent land, air, and sea vehicles. Each card carries attributes such as health, attack power, and level score. After five rounds, the player with the highest score wins.
+Strategic Card Battle is a turn-based Java game simulating a battle between a player and the computer using vehicle cards categorized as land, air, and sea. Each card has distinct attributes such as:
 
----
+- Health Points (HP)
+- Attack Power
+- Type Advantage
 
-## 🛠️ Technologies Used
-
-- **Language**: Java
-- **OOP Principles**: Inheritance, Encapsulation, Polymorphism
-- **GUI Library**: Java Swing
-- **IDE**: IntelliJ IDEA
+Victory is determined after 5 rounds based on accumulated score.
 
 ---
 
-## 🚀 Game Features
+## 💡 Educational Purpose
 
-- 🎴 Multiple unit types (Air, Land, Sea vehicles)
-- 🔄 Randomized card distribution
-- 🧠 AI logic for opponent moves
-- 💥 Dynamic health and attack calculations
-- 🖼️ Visual card interface using images
-- 📊 Score tracking and result declaration
-- 📃 Game log exported to `oyun.txt`
-
----
-
-## 🧱 Object-Oriented Structure
-
-| Class        | Description                                                   |
-|--------------|---------------------------------------------------------------|
-| `savasarac`  | Abstract base class for all vehicle types                     |
-| `ucak`       | Air vehicle subclass with bonus against land units            |
-| `karaarac`   | Ground unit with balanced attack/defense                      |
-| `denizarac`  | Sea unit with high durability                                 |
-| `oyun`       | Main game logic and turn flow                                 |
-| `swingArayuz`| GUI interface using Java Swing                                |
+This project demonstrates:
+- Object-Oriented Programming (OOP) principles:
+  - Inheritance
+  - Polymorphism
+  - Encapsulation
+- Java GUI development with **Swing**
+- Class-based game logic and modular structure
 
 ---
 
-## 🧩 Game Flow
+## 🛠️ Technologies
 
-1. Players are dealt 6 random cards
-2. Each round: players select one card to battle
-3. Cards are compared based on type and attributes
-4. Damage and score are calculated
-5. After 5 rounds or no cards left, the player with the highest score wins
+- **Language:** Java
+- **GUI Library:** Swing
+- **IDE:** IntelliJ IDEA / NetBeans
+- **OOP Concepts Used:** ✔️
 
 ---
-![WhatsApp Image 2025-11-03 at 01 42 36](https://github.com/user-attachments/assets/74d5e707-5573-470c-badf-7050ff6a119f)
-![WhatsApp Image 2025-11-03 at 01 42 36 (1)](https://github.com/user-attachments/assets/8b2188c1-e335-4545-9e3a-4aeffdd9ca07)
+
+## 🧠 Classes Overview
+
+| Class          | Description                                      |
+|----------------|--------------------------------------------------|
+| `savasarac`    | Abstract base class for vehicle cards            |
+| `ucak`         | Air vehicle, strong against ground               |
+| `karaarac`     | Ground vehicle, balanced stats                   |
+| `denizarac`    | Sea vehicle, strong against air units            |
+| `oyun`         | Main logic: game flow, round handling            |
+| `swingArayuz`  | GUI components and visual feedback               |
+
 ---
 
+## 🧩 Game Mechanics
 
+1. Each player is dealt 6 random cards.
+2. Players take turns choosing a card.
+3. Type advantages are:
+   - Air > Ground
+   - Ground > Sea
+   - Sea > Air
+4. Damage and score are calculated.
+5. Game ends in 5 rounds. Highest score wins.
 
-## 🇹🇷 Türkçe Açıklama – Java ile Stratejik Kart Oyunu
+---
 
-Bu proje, Java dili ile geliştirilen ve Nesneye Yönelik Programlama (NYP) ilkelerinin uygulandığı bir kart savaşı simülasyonudur. Oyunda kara, hava ve deniz araçlarını temsil eden kartlar, oyuncu ve bilgisayar arasında stratejik şekilde karşılaştırılır.
+## 🖼️ Screenshots
+
+![Game Screen 1](https://github.com/user-attachments/assets/74d5e707-5573-470c-badf-7050ff6a119f)
+![Game Screen 2](https://github.com/user-attachments/assets/8b2188c1-e335-4545-9e3a-4aeffdd9ca07)
+
+---
+
+## 🗂️ Project Folder Structure
+
+```plaintext
+card-game/
+├── src/
+│   ├── savasarac.java
+│   ├── ucak.java
+│   ├── karaarac.java
+│   ├── denizarac.java
+│   ├── oyun.java
+│   └── swingArayuz.java
+├── assets/              # Card images
+├── oyun.txt             # Game logs
+└── README.md
+```
+
+---
+
+## 🏗️ How to Run
+
+1. Open project in IntelliJ IDEA or NetBeans
+2. Run `main()` in `oyun.java`
+3. Choose cards and play 5 rounds
+
+---
+
+## 🇹🇷 Türkçe – Stratejik Kart Savaşı Oyunu
+
+Java dili ve Swing arayüzüyle geliştirilen bu oyunda, oyuncu ve bilgisayar kara, hava ve deniz araçlarını temsil eden kartlarla 5 tur boyunca mücadele eder. Her kart farklı saldırı gücüne, cana ve avantaja sahiptir.
 
 ---
 
 ### Özellikler
 
-- Farklı türde kartlar: Kara, Hava, Deniz araçları
-- Kalıtım, kapsülleme ve çok biçimlilik (NYP) yapıları
-- Java Swing ile görsel kullanıcı arayüzü
-- Kart karşılaştırma, hasar hesaplama, skor takibi
-- `oyun.txt` dosyasına oyun kaydı
-- 5 tur sonunda en çok puanı alan kazanır
+- OOP prensiplerine dayalı sınıf yapısı
+- Swing ile görsel kullanıcı arayüzü
+- Kart türü karşılaştırması ve puan sistemi
+- Her turun sonucu `oyun.txt` dosyasına kaydedilir
+- Oyun sonunda en yüksek skora sahip oyuncu kazanır
 
 ---
 
 ### Sınıf Yapısı
 
-- `savasarac`: Soyut üst sınıf
-- `ucak`, `karaarac`, `denizarac`: Alt sınıflar
-- `swingArayuz`: Kullanıcı arayüz sınıfı
-- `oyun`: Oyun başlangıcı ve akış kontrolü
+- `savasarac`: Soyut ana sınıf
+- `ucak`, `karaarac`, `denizarac`: Kart tipleri
+- `oyun`: Oyun döngüsü ve karar mekanizması
+- `swingArayuz`: Kullanıcı arayüzü yönetimi
 
 ---
 
 ### Nasıl Çalıştırılır?
 
-1. IntelliJ IDEA veya başka bir Java IDE ile açın
-2. Projeyi çalıştırın (`oyun.java` içinde `main()` metodu)
-3. Kartları seçin ve savaşı başlatın!
+1. Projeyi IntelliJ IDEA veya NetBeans ile açın
+2. `oyun.java` içinden çalıştırın
+3. Kart seçin ve 5 tur boyunca mücadele edin
 
 ---
 
-### Ekip Üyeleri
+### Geliştiriciler
 
-- 👩‍💻 Rahime Uysal – Arayüz, sınıf yapıları, testler
-- 👩‍💻 Zeynep Vuslat Solmaz – Oyun akışı, algoritmalar, raporlama
+- 👩‍💻 **Rahime Uysal** – Arayüz, sınıflar, test
+- 👩‍💻 **Zeynep Vuslat Solmaz** – Algoritmalar, oyun akışı, rapor
 
 ---
-
